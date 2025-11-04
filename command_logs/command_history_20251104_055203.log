@@ -1,0 +1,50 @@
+[2025-11-04 05:52:03] [/workspaces/Lab04] source .devcontainer/shell.sh
+[2025-11-04 05:53:42] [/workspaces/Lab04] source .devcontainer/shell.sh
+[2025-11-04 05:54:27] [/workspaces/Lab04] ls > files_list.txt
+[2025-11-04 05:55:37] [/workspaces/Lab04] cat numbers.txt > numbers_copy.txt
+[2025-11-04 05:56:31] [/workspaces/Lab04] echo "This is a new line" >> numbers_copy.txt
+[2025-11-04 05:57:35] [/workspaces/Lab04] ls -la > directory_info.txt
+[2025-11-04 05:58:15] [/workspaces/Lab04] date > timestamp.txt
+[2025-11-04 06:02:24] [/workspaces/Lab04] ls project/program.txt 2> errors.log
+[2025-11-04 06:02:24] [/workspaces/Lab04] ls project/program.txt 2> errors.log
+[2025-11-04 06:06:22] [/workspaces/Lab04] ls | grep ".txt" > found_files.txt 2> find_errors.log 
+[2025-11-04 06:13:01] [/workspaces/Lab04] grep "ERROR" server.log > all_output.log 2>&1
+[2025-11-04 06:14:01] [/workspaces/Lab04] grep "ERROR" server.log > all_output.log 2>&1
+[2025-11-04 06:16:41] [/workspaces/Lab04] cat server.log | wc -1
+[2025-11-04 06:16:51] [/workspaces/Lab04] cat server.log | wc -l
+[2025-11-04 06:17:54] [/workspaces/Lab04] ls | grep ".txt"
+[2025-11-04 06:19:05] [/workspaces/Lab04] sort unsorted_data.txt | uniq
+[2025-11-04 06:19:41] [/workspaces/Lab04] grep "ERROR" server.log | wc -l
+[2025-11-04 06:21:11] [/workspaces/Lab04] cut -d' ' -f1 users.txt | sort
+[2025-11-04 06:22:07] [/workspaces/Lab04] du -h /home | sort -hr | head -3
+[2025-11-04 06:23:11] [/workspaces/Lab04] du -h | sort -hr | head -3
+[2025-11-04 06:26:14] [/workspaces/Lab04] cat > introduction.txt << EOF
+introduction text file
+yes
+meow
+EOF
+[2025-11-04 06:28:37] [/workspaces/Lab04] cat << EOF > simple.html
+i dont 
+know how html
+works
+EOF
+[2025-11-04 06:31:28] [/workspaces/Lab04] sed -f - users.txt << 'EOF'
+s/Developer/SalesDeveloper/g
+s/Marketing/Sales/g
+EOF
+[2025-11-04 06:31:28] [/workspaces/Lab04] sed -f - users.txt << 'EOF'
+s/Developer/SalesDeveloper/g
+s/Marketing/Sales/g
+EOF
+[2025-11-04 06:32:59] [/workspaces/Lab04] wc -m <<< "Linux is an open-source operating system"
+[2025-11-04 06:36:02] [/workspaces/Lab04] tr '[:lower:]' '[upper:]' <<< "hello" 
+[2025-11-04 06:36:33] [/workspaces/Lab04] tr '[hello]' '[HELLO]' <<< "hello" 
+[2025-11-04 06:41:24] [/workspaces/Lab04] grep "192.168.1.100" <<< "$(cat server.log)"
+[2025-11-04 06:42:06] [/workspaces/Lab04] paste -sd ',' <(tr ',' '\n' <<< "3,1,4,1,5,9,2,6" | sort -n)
+[2025-11-04 06:42:36] [/workspaces/Lab04] diff <(cat dir1_files.txt) <(cat dir2_files.txt)
+[2025-11-04 06:43:22] [/workspaces/Lab04] comm -12 <(sort dir1_files.txt) <(sort dir2_files.txt)
+[2025-11-04 06:45:30] [/workspaces/Lab04] paste <(sort numbers.txt) <(tr '[:123456789:]' '[:!@#$%^&*(:]' < numbers.txt)
+[2025-11-04 06:49:00] [/workspaces/Lab04] grep -E 'ERROR|WARNING' server.log | sort -k1,2
+[2025-11-04 06:49:31] [/workspaces/Lab04] grep -E -o "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}\b" users.txt | sort -u > emails.txt
+[2025-11-04 06:50:34] [/workspaces/Lab04] comm -23 <(sort dir1_files.txt) <(sort dir2_files.txt)
+[2025-11-04 06:51:33] [/workspaces/Lab04] git status
